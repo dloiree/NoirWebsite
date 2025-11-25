@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 50px;
+}
+
+.judul {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+    margin-top: 80px;
+    height: 75vh;
+    background-image: url("smpn 12 tangerang.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* ================= ABOUT ================= */
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.about-text {
+    max-width: 900px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.about-text h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: #5b88b2;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: #ddd;
+}
+
+.footer-menu {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .about-text {
+        padding: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul {
+        font-size: 18px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+}
+
+

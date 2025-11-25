@@ -1,0 +1,220 @@
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo { width: 50px; }
+
+.judul {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 70vh;
+    background: url(smpn\ 12\ tangerang.jpg) center/cover no-repeat;
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 60px 20px;
+    background: white;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+
+/* CARD KEPALA SEKOLAH */
+.card {
+    background: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 350px;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.jabatan {
+    text-align: center;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.visi {
+    padding: 0 20px;
+    text-align: justify;
+}
+
+/* TEKS PROFIL */
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-text span {
+    color: #5b88b2;
+}
+
+/* Kotak Putih Besar */
+.bg {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: 2px solid black;
+}
+
+.bg p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 10px;
+    color: black;
+}
+
+/* ANIMASI */
+.reveal { opacity: 0; transform: translateY(40px); transition: 1s; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+.reveal-right { opacity: 0; transform: translateX(40px); transition: 1s; }
+.reveal-right.active { opacity: 1; transform: translateX(0); }
+
+.card-reveal { opacity: 0; transform: translateY(40px); transition: 1s; }
+.card-reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ============== RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background: rgba(0,0,0,0.85);
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 40px;
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+}
